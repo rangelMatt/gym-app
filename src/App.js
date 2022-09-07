@@ -10,10 +10,12 @@ function createAlert() {
 function App() {
   return (
     <div className="App">
-      <Header info="This is MY message"/>
+      <Header info="This is MY message" />
       <p>main content</p>
       <Footer trademark="page by Matt"
-      myAlert={createAlert}/>
+        myAlert={createAlert} />
+
+        
     </div>
   );
 }
