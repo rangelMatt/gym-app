@@ -2,8 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Header from './components/header';
+import Footer from './components/footer';
 import reportWebVitals from './reportWebVitals';
+import { Routes, BrowserRouter, Route } from 'react-router-dom';
 
+
+export default function Gym() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route exact path='/' component={App} />
+        <Route path='/header' component={Header} />
+        <Route path='/footer' component={Footer} />
+      </Routes>
+    </BrowserRouter>
+  )
+
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
