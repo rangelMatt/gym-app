@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 
 class Footer extends Component {
+  
 
-  changed() {
-    console.log('Footer changed')
+  state = {
+    name: 'Matt',
+    age: 39, 
+  }
+
+  changed = e => {
+    
+    this.setState({ name: e.target.value })
+    console.log(this.state.name);
   }
 
   render() {
@@ -12,7 +20,8 @@ class Footer extends Component {
         <h2 onClick={this.props.myAlert}>
           {this.props.trademark}
         </h2>
-        <input onChange={this.changed}type="text" />
+        <input value={this.state.name}
+        onChange={this.changed}type="text" />
       </div>
     )
 
